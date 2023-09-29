@@ -1,25 +1,17 @@
-;一番最初に呼び出されるファイル
+*start
+[position height=160 top=430]
+[cm]
 
-[title name="ティラノスクリプト解説"]
-
-[stop_keyconfig]
-
-
-;ティラノスクリプトが標準で用意している便利なライブラリ群
-;コンフィグ、CG、回想モードを使う場合は必須
-@call storage="tyrano.ks"
-
-;ゲームで必ず必要な初期化処理はこのファイルに記述するのがオススメ
-
-;メッセージボックスは非表示
-@layopt layer="message" visible=false
-
-;最初は右下のメニューボタンを非表示にする
-[hidemenubutton]
-
-;タイトル画面へ移動
-@jump storage="title.ks"
-
-[s]
+ ;背景画像の切り替え実行
+ [bg storage="classroom_front_moning.jpg"]
 
 
+;１人目のキャラクター登場
+[chara_new name="tojo" storage="chara/tojo/normal.png" jname="知識" width=1080 height=1920]
+[chara_show name="tojo" top=10 left=300]
+こんにちは！[l][r]
+
+;２人目のキャラクター登場
+[chara_new name="joka" storage="chara/joka/normal.png" jname="情科" width=720 height=1260]
+[chara_show name="joka" top=100 left=20]
+こんにちは！[l][r]
